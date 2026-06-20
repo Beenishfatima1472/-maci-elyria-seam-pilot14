@@ -1,0 +1,10 @@
+{
+  "packet_id": "maci-change-001",
+  "language_context": {"status": "CURRENT"},
+  "input_context": {
+    "status": "CURRENT",
+    "authority": {"status": "VALID"},
+    "changed_context": {"status": "CHANGED"}
+  },
+  "consequence_signal": {"status": "CURRENT"}
+}
