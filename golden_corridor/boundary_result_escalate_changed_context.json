@@ -1,0 +1,18 @@
+{
+  "bind_status": "NO_BIND",
+  "boundary_decision": "ESCALATE",
+  "boundary_inputs": {
+    "state": {
+      "status": "CHANGED"
+    }
+  },
+  "boundary_result_present": true,
+  "boundary_result_type": "ELYRIA_VERITA_BOUNDARY_RESULT",
+  "created_at": "2026-06-18T00:00:00Z",
+  "formation_status": "PENDING_REVIEW",
+  "invariant": "MACI informs. Elyria resolves. No consequence binds without the boundary result.",
+  "maci_can_bind": false,
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "reason_code": "changed_context_requires_review",
+  "source": "ELYRIA_VERITA_BOUNDARY"
+}

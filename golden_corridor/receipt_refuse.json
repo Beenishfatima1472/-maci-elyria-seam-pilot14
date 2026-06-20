@@ -1,0 +1,15 @@
+{
+  "bind_status": "NO_BIND",
+  "boundary_decision": "REFUSE",
+  "boundary_result_present": true,
+  "boundary_result_required": true,
+  "created_at": "2026-06-18T00:00:00Z",
+  "digest": "public-safe-refuse-receipt-digest-placeholder",
+  "formation_status": "NO_BIND",
+  "invariant": "MACI informs. Elyria resolves. No consequence binds without the boundary result.",
+  "maci_can_bind": false,
+  "packet_hash": "public-safe-golden-packet-digest-placeholder",
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "reason_code": "missing_authority",
+  "receipt_id": "GOLDEN-RECEIPT-REFUSE-0001"
+}

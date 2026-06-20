@@ -1,0 +1,15 @@
+{
+  "bind_status": "BOUND",
+  "boundary_decision": "ADMIT",
+  "boundary_result_present": true,
+  "boundary_result_required": true,
+  "created_at": "2026-06-18T00:00:00Z",
+  "digest": "public-safe-admit-receipt-digest-placeholder",
+  "formation_status": "ADMITTED",
+  "invariant": "MACI informs. Elyria resolves. No consequence binds without the boundary result.",
+  "maci_can_bind": false,
+  "packet_hash": "public-safe-golden-packet-digest-placeholder",
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "reason_code": "valid_standing_authority_evidence_scope_custody",
+  "receipt_id": "GOLDEN-RECEIPT-ADMIT-0001"
+}

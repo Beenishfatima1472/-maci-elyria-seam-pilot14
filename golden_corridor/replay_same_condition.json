@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-06-18T00:00:00Z",
+  "lawful_change": false,
+  "maci_can_bind": false,
+  "original_bind_status": "BOUND",
+  "original_boundary_decision": "ADMIT",
+  "original_receipt_id": "GOLDEN-RECEIPT-ADMIT-0001",
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "replay_bind_status": "BOUND",
+  "replay_boundary_decision": "ADMIT",
+  "replay_id": "GOLDEN-REPLAY-SAME-0001",
+  "replay_mode": "SAME_CONDITIONS",
+  "replay_status": "MATCH"
+}

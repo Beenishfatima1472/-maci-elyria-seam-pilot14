@@ -1,0 +1,18 @@
+{
+  "changed_condition": {
+    "evidence": "STALE"
+  },
+  "created_at": "2026-06-18T00:00:00Z",
+  "lawful_change": true,
+  "maci_can_bind": false,
+  "original_bind_status": "BOUND",
+  "original_boundary_decision": "ADMIT",
+  "original_receipt_id": "GOLDEN-RECEIPT-ADMIT-0001",
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "reason_code": "stale_evidence_blocks_prior_admissibility",
+  "replay_bind_status": "NO_BIND",
+  "replay_boundary_decision": "REFUSE",
+  "replay_id": "GOLDEN-REPLAY-CHANGED-0001",
+  "replay_mode": "CHANGED_CONDITIONS",
+  "replay_status": "LAWFUL_CHANGE"
+}

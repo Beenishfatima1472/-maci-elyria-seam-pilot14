@@ -1,0 +1,29 @@
+{
+  "artifacts": [
+    {
+      "artifact": "golden_corridor/input_valid.json",
+      "created_at": "2026-06-18T00:00:00Z",
+      "role": "input_packet",
+      "sha256": "b5383551573befa92504da81baae2d920bc78492609c7e571d052bab19122d01"
+    },
+    {
+      "artifact": "RELEASE_MANIFEST.md",
+      "created_at": "2026-06-18T00:00:00Z",
+      "role": "release_manifest",
+      "sha256": "328d5887d236ad56e7b0b8a8c52fe73bfacc2e68bceeb40d1d2d91e128500d00"
+    },
+    {
+      "artifact": "REVIEWER_QUICKSTART.md",
+      "created_at": "2026-06-18T00:00:00Z",
+      "role": "reviewer_quickstart",
+      "sha256": "9fe82600320178bdc6ced1a1b997647286c3d008dcb8bbb660114a9c0eba6323"
+    },
+    {
+      "artifact": "simulated_flows/flows_v1.jsonl",
+      "created_at": "2026-06-18T00:00:00Z",
+      "role": "flow_file",
+      "sha256": "c8e109d5f63450cffd6af94a69738e2e117f8d31e430de3142ee2cb8b97e8d44"
+    }
+  ],
+  "manifest_type": "MACI_ELYRIA_A_PLUS_DIGEST_MANIFEST"
+}

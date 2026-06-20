@@ -1,0 +1,57 @@
+{
+  "actor": {
+    "agent_id": "maci-simulated-agent",
+    "human_requester": "benchmark-reviewer",
+    "system_origin": "maci-simulated-flow"
+  },
+  "boundary_inputs": {
+    "authority": {
+      "status": "VALID"
+    },
+    "custody": {
+      "status": "VALID"
+    },
+    "evidence": {
+      "freshness": "FRESH",
+      "status": "SUFFICIENT"
+    },
+    "scope": {
+      "status": "VALID"
+    },
+    "standing": {
+      "status": "VALID"
+    }
+  },
+  "created_at": "2026-06-18T00:00:00Z",
+  "domain": "healthcare",
+  "maci_context": {
+    "consequence_signal": {
+      "bind_attempt": false,
+      "risk_level": "moderate",
+      "status": "CURRENT"
+    },
+    "input_context": {
+      "changed_context": {
+        "status": "UNCHANGED"
+      },
+      "status": "CURRENT"
+    },
+    "language_context": {
+      "ambiguity": "low",
+      "language": "en",
+      "status": "CURRENT"
+    },
+    "risk_notes": [
+      "MACI provides context only; boundary result required before consequence binding."
+    ]
+  },
+  "packet_id": "GOLDEN-MACI-ELYRIA-0001",
+  "proposed_movement": {
+    "action": "release_care_plan_update",
+    "affected_party": "patient",
+    "intended_consequence": "customer-impacting clinical workflow communication",
+    "target": "patient-care-team"
+  },
+  "source_layer": "MACI",
+  "tenant_id": "public-benchmark"
+}
