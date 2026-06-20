@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MACI–Elyria Proof Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171b22;
+      --panel2: #202633;
+      --text: #edf2f7;
+      --muted: #a8b3c7;
+      --line: #344054;
+      --accent: #d6a84f;
+      --danger: #ef6f6c;
+      --ok: #79d19a;
+      --hold: #7fb8d8;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      padding: 28px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #141821, #0f1115);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 980px;
+      line-height: 1.5;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 18px;
+      padding: 18px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 6px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0c0f14;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 14px;
+      padding: 11px 14px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #101010;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: var(--panel2);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      min-height: 110px;
+    }
+
+    .value {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 12px;
+      background: #2b3242;
+      color: var(--text);
+    }
+
+    .badge.ok { color: var(--ok); }
+    .badge.danger { color: var(--danger); }
+    .badge.hold { color: var(--hold); }
+
+    pre {
+      background: #0c0f14;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      overflow: auto;
+      max-height: 420px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>MACI–Elyria Proof Viewer</h1>
+  <div class="subtitle">
+    MACI structures customer/domain context. MACI does not bind consequence.
+    Elyria/VERITA resolves whether proposed movement may form, must refuse, must hold,
+    must escalate, must narrow, or may be admitted.
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>1. MACI Intake</h2>
+
+    <label>Proposed action</label>
+    <input id="proposed_action" value="send_customer_impacting_email" />
+
+    <label>Intended consequence</label>
+    <input id="intended_consequence" value="customer-impacting communication" />
+
+    <label>Authority</label>
+    <select id="authority">
+      <option value="VALID">VALID</option>
+      <option value="MISSING">MISSING</option>
+      <option value="REVOKED">REVOKED</option>
+      <option value="INVALID">INVALID</option>
+    </select>
+
+    <label>Evidence</label>
+    <select id="evidence">
+      <option value="SUFFICIENT">SUFFICIENT</option>
+      <option value="INSUFFICIENT">INSUFFICIENT</option>
+      <option value="MISSING">MISSING</option>
+    </select>
+
+    <label>Scope</label>
+    <select id="scope">
+      <option value="VALID">VALID</option>
+      <option value="TOO_BROAD">TOO_BROAD</option>
+      <option value="INVALID">INVALID</option>
+    </select>
+
+    <label>Custody</label>
+    <select id="custody">
+      <option value="VALID">VALID</option>
+      <option value="INVALID">INVALID</option>
+      <option value="MISSING">MISSING</option>
+    </select>
+
+    <label>Language status</label>
+    <select id="language">
+      <option value="CURRENT">CURRENT</option>
+      <option value="UNCERTAIN">UNCERTAIN</option>
+      <option value="AMBIGUOUS">AMBIGUOUS</option>
+      <option value="LOW_CONFIDENCE">LOW_CONFIDENCE</option>
+    </select>
+
+    <label>MACI bind attempt</label>
+    <select id="maci_can_bind">
+      <option value="false">false</option>
+      <option value="true">true</option>
+    </select>
+
+    <button onclick="runProof()">Submit to Boundary Runtime</button>
+    <button class="secondary" onclick="loadMissingAuthority()">Load Missing Authority Case</button>
+
+    <p class="muted">
+      Hard rule: MACI may inform. MACI may not bind consequence.
+    </p>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h2>2. Boundary Resolution</h2>
+        <div class="muted">Boundary Result</div>
+        <div id="boundary_result" class="value badge">not run</div>
+        <br /><br />
+        <div class="muted">Formation Status</div>
+        <div id="formation_status" class="value badge">not run</div>
+        <br /><br />
+        <div class="muted">Reason Code</div>
+        <div id="reason_code" class="value">not run</div>
+      </div>
+
+      <div class="card">
+        <h2>Boundary Checks</h2>
+        <div class="muted">Standing / Authority / Evidence / Scope / Custody</div>
+        <div id="checks" class="value">not run</div>
+      </div>
+
+      <div class="card">
+        <h2>3. Receipt</h2>
+        <div class="muted">Receipt proof</div>
+        <div id="receipt" class="value">not run</div>
+      </div>
+
+      <div class="card">
+        <h2>4. Replay</h2>
+        <div class="muted">Changed-condition and tamper proof</div>
+        <div id="replay" class="value">not run</div>
+      </div>
+    </div>
+
+    <section style="margin-top: 16px;">
+      <h2>Proof Transcript</h2>
+      <pre id="proof_json">{}</pre>
+    </section>
+  </section>
+</main>
+
+<script>
+async function postJSON(path, body) {
+  const response = await fetch(path, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  if (!response.ok) {
+    throw new Error(`${path} failed: ${response.status}`);
+  }
+  return response.json();
+}
+
+function intakeBody() {
+  return {
+    proposed_action: document.getElementById("proposed_action").value,
+    intended_consequence: document.getElementById("intended_consequence").value,
+    authority: { status: document.getElementById("authority").value },
+    evidence: { status: document.getElementById("evidence").value },
+    scope: { status: document.getElementById("scope").value },
+    custody: { status: document.getElementById("custody").value },
+    standing: { status: "VALID" },
+    language_context: {
+      status: document.getElementById("language").value,
+      language: "en"
+    },
+    maci_can_bind: document.getElementById("maci_can_bind").value === "true"
+  };
+}
+
+function badgeClass(value) {
+  if (["REFUSE", "HALT", "NO_BIND", "INVALID", "MISMATCH"].includes(value)) return "badge danger";
+  if (["ADMIT", "ADMITTED", "MATCH"].includes(value)) return "badge ok";
+  return "badge hold";
+}
+
+function setBadge(id, value) {
+  const el = document.getElementById(id);
+  el.textContent = value || "unknown";
+  el.className = badgeClass(value || "");
+}
+
+async function runProof() {
+  const intake = await postJSON("/maci/intake", intakeBody());
+  const packet = intake.movement_packet;
+
+  const proof = await postJSON("/proof/create", {
+    movement_packet: packet,
+    case_name: packet.packet_id
+  });
+
+  const boundary = proof.boundary_result;
+  const receipt = proof.receipt;
+  const replay = proof.replay;
+
+  setBadge("boundary_result", boundary.boundary_decision);
+  setBadge("formation_status", boundary.formation_status);
+  document.getElementById("reason_code").textContent = boundary.reason_code || boundary.decision_class;
+
+  document.getElementById("checks").innerHTML = `
+    standing=${boundary.standing_result}<br>
+    authority=${boundary.authority_result}<br>
+    evidence=${boundary.evidence_result}<br>
+    scope=${boundary.scope_result}<br>
+    custody=${boundary.custody_result}<br>
+    route_closure=${boundary.route_closure_result}
+  `;
+
+  document.getElementById("receipt").innerHTML = `
+    receipt_id=${receipt.receipt_id}<br>
+    packet_hash=${receipt.packet_hash}<br>
+    result_hash=${receipt.result_hash}<br>
+    receipt_hash=${receipt.receipt_hash}<br>
+    policy_version=${receipt.policy_version}<br>
+    no_bind_status=${receipt.no_bind_status}<br>
+    witness_digest=${receipt.witness_digest}
+  `;
+
+  document.getElementById("replay").innerHTML = Object.entries(replay)
+    .map(([mode, result]) => `${mode}: ${result.replay_status} / ${result.replayed_boundary_result}`)
+    .join("<br>");
+
+  document.getElementById("proof_json").textContent = JSON.stringify(proof, null, 2);
+}
+
+function loadMissingAuthority() {
+  document.getElementById("authority").value = "MISSING";
+  document.getElementById("evidence").value = "SUFFICIENT";
+  document.getElementById("scope").value = "VALID";
+  document.getElementById("custody").value = "VALID";
+  document.getElementById("language").value = "CURRENT";
+  document.getElementById("maci_can_bind").value = "false";
+}
+
+runProof().catch(err => {
+  document.getElementById("proof_json").textContent = String(err);
+});
+</script>
+</body>
+</html>
