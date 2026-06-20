@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets / env
+.env
+.env.*
+*.pem
+*.key
+*.token
+
+# Local runtime outputs
+*.log
+tmp/
+dist/
+build/
+
+# Protected/private runtime material - never commit
+elyria_private/
+private_engine/
+private_policy_packs/
+production_policy_packs/
+*.private.py
+*.secret.json
+
+# Local-only private production material - same repo, never pushed
+_private_kernel/
+_customer_secrets/
+_production_keys/
+*.prod.secret
+*.customer.secret
+*.kms.json
+*.hsm.json
+
+# Python cache artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Python cache artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Python cache artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local runtime output
+runtime/
+
+# Public-safe production template allowed
+!.env.production.example
+
+# Public-safe env templates allowed
+!.env.example
+!.env.production.example
