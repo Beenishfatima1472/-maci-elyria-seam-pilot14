@@ -1,0 +1,56 @@
+{
+  "packet_id": "ai-agent-valid-structured-context",
+  "created_at": "2026-06-17T00:00:00+00:00",
+  "source_layer": "MACI",
+  "domain": "ai-agent-action",
+  "actor": {
+    "agent_id": "agent-demo",
+    "human_requester": "operator-demo",
+    "system_origin": "buyer-demo"
+  },
+  "proposed_movement": {
+    "action": "send_customer_impacting_email",
+    "target": "customer",
+    "intended_consequence": "customer-impacting communication",
+    "affected_party": "customer"
+  },
+  "maci_context": {
+    "language_context": {
+      "status": "CURRENT",
+      "language": "en",
+      "confidence": 0.98
+    },
+    "input_context": {
+      "status": "CURRENT",
+      "changed_context": {
+        "status": "UNCHANGED"
+      }
+    },
+    "consequence_signal": {
+      "status": "CURRENT",
+      "bind_attempt": false
+    },
+    "risk_notes": []
+  },
+  "boundary_inputs": {
+    "standing": {
+      "status": "VALID"
+    },
+    "authority": {
+      "status": "VALID"
+    },
+    "evidence": {
+      "status": "SUFFICIENT"
+    },
+    "scope": {
+      "status": "VALID"
+    },
+    "custody": {
+      "status": "VALID"
+    }
+  },
+  "seam_guard": {
+    "maci_can_bind": false,
+    "requires_elyria_boundary_result": true
+  }
+}
