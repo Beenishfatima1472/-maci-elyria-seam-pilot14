@@ -1,0 +1,27 @@
+{
+  "packet_id": "maci-valid-001",
+  "language_context": {
+    "status": "CURRENT",
+    "language": "en",
+    "confidence": 0.98
+  },
+  "input_context": {
+    "status": "CURRENT",
+    "source": "review-request",
+    "scope": "pilot",
+    "authority": {
+      "status": "VALID",
+      "authority_root": "MACI-PILOT-AUTH-001"
+    },
+    "changed_context": {
+      "status": "UNCHANGED"
+    }
+  },
+  "consequence_signal": {
+    "status": "CURRENT",
+    "proposed_action": "publish_review",
+    "effect": "customer_reliance",
+    "bind_attempt": false,
+    "boundary_controlled": true
+  }
+}

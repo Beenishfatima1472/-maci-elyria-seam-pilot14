@@ -1,0 +1,14 @@
+{
+  "packet_id": "maci-uncertain-001",
+  "language_context": {
+    "status": "UNCERTAIN",
+    "confidence": 0.42
+  },
+  "input_context": {
+    "status": "CURRENT",
+    "authority": {"status": "VALID"}
+  },
+  "consequence_signal": {
+    "status": "CURRENT"
+  }
+}

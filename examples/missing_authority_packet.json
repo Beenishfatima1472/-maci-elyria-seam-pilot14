@@ -1,0 +1,9 @@
+{
+  "packet_id": "maci-auth-001",
+  "language_context": {"status": "CURRENT"},
+  "input_context": {
+    "status": "CURRENT",
+    "authority": {"status": "MISSING"}
+  },
+  "consequence_signal": {"status": "CURRENT"}
+}
