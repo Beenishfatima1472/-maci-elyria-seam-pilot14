@@ -1,0 +1,10 @@
+{
+  "name": "maci-elyria-seam-pilot",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Public-safe MACI-on-Elyria full-stack consequence runtime demo",
+  "scripts": {
+    "test": "pytest",
+    "api": "python -m api.app"
+  }
+}

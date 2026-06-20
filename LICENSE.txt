@@ -1,0 +1,13 @@
+Copyright (c) 2026 Samantha Revita and Terry Snyder
+
+All rights reserved.
+
+This repository is made available for public technical review as a public-safe seam pilot.
+
+No permission is granted to copy, modify, distribute, sublicense, sell, deploy, commercialize, host, train from, integrate, or create derivative works from this repository or its concepts without separate written permission from Samantha Revita and Terry Snyder.
+
+This repository does not grant production deployment rights, resale rights, managed-service rights, certification authority, legal authority, medical authority, financial authority, or regulatory authority.
+
+The names Elyria, VERITA, and MACI, as used in this repository, refer to the public-safe demonstration architecture and associated boundary-seam materials authored by Samantha Revita and Terry Snyder.
+
+Commercial use requires separate written scope.

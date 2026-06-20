@@ -1,0 +1,33 @@
+.PHONY: install test proofs verify bundle run docker-build docker-run release-check
+
+install:
+	python3 -m venv .venv
+	. .venv/bin/activate && pip install -r requirements.txt
+
+test:
+	pytest
+
+proofs:
+	python3 scripts/generate_ai_agent_proofs.py
+
+verify:
+	python3 scripts/verify_receipts.py proofs
+
+bundle:
+	python3 scripts/build_review_bundle.py
+
+run:
+	python -m api.app
+
+docker-build:
+	docker build -t maci-elyria-seam-pilot .
+
+docker-run:
+	docker run --rm -p 8080:8080 maci-elyria-seam-pilot
+
+release-check:
+	pytest
+	python3 scripts/generate_ai_agent_proofs.py
+	python3 scripts/verify_receipts.py proofs
+	python3 scripts/build_review_bundle.py
+	git status --short

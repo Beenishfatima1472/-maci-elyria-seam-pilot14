@@ -1,0 +1,17 @@
+[project]
+name = "maci-elyria-seam-pilot"
+version = "0.2.0"
+description = "Public-safe MACI-on-Elyria consequence-boundary runtime demo"
+requires-python = ">=3.10"
+dependencies = [
+  "flask>=3.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
